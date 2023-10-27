@@ -1,0 +1,34 @@
+<app-sidebar></app-sidebar>
+<div class="new-user-section">
+  <form (submit)="onUpdate(UserToEdit!.id, UserToEdit!)" >    <!--  (ngSubmit)="updateData(loginForm.value)">  -->
+    <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+      <input   [(ngModel)]="UserToEdit!.id" [ngModelOptions]="{standalone: true}" name="id"   placeholder="id" type="text"   />
+    </div>
+    <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <input  [(ngModel)]="UserToEdit!.userName"  name="UserName" [ngModelOptions]="{standalone: true}"  placeholder="UserName" type="text"  />
+  </div>
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <input  [(ngModel)]="UserToEdit!.fullName" name="UserSurname" [ngModelOptions]="{standalone: true}"   placeholder="SurName" type="text"  />
+  </div>
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <input  [(ngModel)]="UserToEdit!.email" name="Email" [ngModelOptions]="{standalone: true}"   placeholder="Email" type="text"   />
+  </div>
+
+
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <p-inputMask  [(ngModel)]="UserToEdit!.userType" name="Phone" [ngModelOptions]="{standalone: true}"   mask="(999) 999-9999" placeholder="Phone (5XX) XXX XXXX"/>
+  </div>
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <p-password  [(ngModel)]="UserToEdit!.passwordSalt" name="Password" [ngModelOptions]="{standalone: true}"   placeholder="Password" />
+  </div>
+  <!--
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <p-dropdown placeholder="Role" [options]="users" [(ngModel)]="selectedUsers" optionLabel="name"></p-dropdown>
+  </div>
+-->
+  <!-- ROLE SELECT İLE SEÇİLECEK (ADMIN-USER)     (click)="updateUser(user)" *ngIf="user.id" -->
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <button  type="submit" pButton pRipple label="Güncelle" class="p-button-success btn">update</button>
+  </div>
+</form>
+</div>

@@ -1,0 +1,10 @@
+<p>delete-user works!</p>
+<app-sidebar></app-sidebar>
+<div class="new-user-section container mt-4 center" >
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+    <input value="0"  mask="99" [(ngModel)]="id" placeholder="ID Number" [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <div style="float: left; margin-left: 10px;" class="flex-auto mt-2">
+      <button pButton pRipple label="Sil" class="p-button-danger" (click)="delete(this.id);">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start height">
+
+
+  <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form (submit)="register()">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" [(ngModel)]="registerRequest.email" name="UserName" [ngModelOptions]="{standalone: true}" class="form-control"  />
+                    <label class="form-label" >Email</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" [(ngModel)]="registerRequest.username" name="UserName" [ngModelOptions]="{standalone: true}" class="form-control" />
+                    <label class="form-label" >User Name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" [(ngModel)]="registerRequest.fullName" name="UserName" [ngModelOptions]="{standalone: true}" class="form-control"  />
+                    <label class="form-label" >Full Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" [(ngModel)]="registerRequest.password" name="UserName" [ngModelOptions]="{standalone: true}" class="form-control" />
+                    <label class="form-label" >Password</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Checkbox
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                <label class="form-check-label" for="form2Example33">
+                  Subscribe to our newsletter
+                </label>
+              </div>
+              -->
+
+              <!-- Submit button -->
+              <button (click)="register()" type="submit" class="btn btn-primary btn-block mb-4" value="Sign up">Sign Up</button>
+
+              <input routerLink="/login" type="submit" class="btn btn-primary btn-block mb-4" value="Sign In"/>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https://picsum.photos/id/764/350/650"
+          alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+<app-footer></app-footer>
